@@ -4,3 +4,6 @@
 # compiler/cmake output
 build/
 debug/
+
+# eclipse project files
+.project
