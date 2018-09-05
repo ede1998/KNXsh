@@ -6,6 +6,7 @@
 #include "knxconnection.hh"
 
 using boost::asio::ip::udp;
+
 int main(int argc, char** argv)
 {
   std::cout << "Hello from " << argv[0] << std::endl;

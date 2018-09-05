@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 project(knxcmd)
-set(BOOST_ROOT /home/erik/Programming/boost_1_67_0)
+set(BOOST_ROOT /home/erik/programming/boost_1_68_0)
 find_package(Boost REQUIRED system regex)
 find_package(Threads REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})
