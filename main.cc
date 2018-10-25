@@ -2,7 +2,6 @@
 #include <boost/asio.hpp>
 #include <boost/asio/ip/address.hpp>
 #include <array>
-#include "data_blocks.hh"
 #include "knxconnection.hh"
 
 using boost::asio::ip::udp;
@@ -11,9 +10,8 @@ int main(int argc, char** argv)
 {
   std::cout << "Hello from " << argv[0] << std::endl;
 
-  std::cout << "sizeof(KNX:datagrams::package) = " << sizeof(KNX::datagrams::package) << std::endl;
   KNX::Connection con;
-  con.open("192.168.140.21");
+  con.open("127.0.0.1", "192.168.140.43");
   con.send();
   con.close();
   

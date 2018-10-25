@@ -3,7 +3,6 @@
 #include <sstream>
 #include <string>
 #include <ios>
-#include "data_blocks.hh"
 
 namespace ip = boost::asio::ip;
 using ip::udp;
@@ -23,4 +22,14 @@ void Channel::setIP(const std::string& ip)
 void Channel::setPort(unsigned short port)
 {
   mEndpoint.port(port);
+}
+
+boost::asio::ip::udp::endpoint& Channel::getEndpoint()
+{
+    return mEndpoint;
+}
+
+boost::asio::ip::udp::socket& Channel::getSocket()
+{
+    return mSocket;
 }

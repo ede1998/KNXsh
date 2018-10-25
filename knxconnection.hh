@@ -15,11 +15,11 @@ namespace KNX
   {
     public:
       Connection();
-      bool open(const std::string& ip);
+      bool open(const std::string& dest_ip, const std::string& src_ip);
       void close();
       void send();
       bool isOpen();
-      static const unsigned int PORT = 13; // 3671
+      static const unsigned int PORT = 3671;
     private:
       friend class ConnectionState::State;
       std::shared_ptr<ConnectionState::State> mState;

@@ -12,9 +12,9 @@ Connection::Connection()
 {
 }
 
-bool Connection::open(const std::string& ip)
+bool Connection::open(const std::string& dest_ip, const std::string& src_ip)
 {
-  mState->open(this, ip);
+  mState->open(this, dest_ip, src_ip);
   return isOpen();
 }
 
